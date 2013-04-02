@@ -6,6 +6,7 @@ use strict;
 use warnings;
 
 use File::Slurp;
+use List::MoreUtils qw(uniq);
 use Carp;
 
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
@@ -111,7 +112,7 @@ sub _get_addresses{
 			push(@navrat,$adr);
 		}
 	}
-	return @navrat;
+	return sort uniq(@navrat);
 }
 
 1;
