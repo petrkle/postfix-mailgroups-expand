@@ -1,4 +1,6 @@
 {{$NEXT}}
+	Add last endline to created files.
+	Add missing dependency.
 
 1.130923  2013-04-02 13:23:31 Europe/Prague
 	Emails are now sorted and uniq.

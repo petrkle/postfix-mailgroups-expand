@@ -12,6 +12,7 @@ use Carp;
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
 require Exporter;
+require AutoLoader;
 
 our @ISA = qw(Exporter AutoLoader);
 our @EXPORT = qw();
@@ -58,7 +59,7 @@ sub write2dir{
 
 	foreach my $k (keys %$groups) {
 		my @adr = $self->_get_addresses($alias_map->{$groups->{$k}});
-		write_file("$dir/$k",join("\n",@adr));
+		write_file("$dir/$k",join("\n",@adr)."\n");
 	}
 }
 
